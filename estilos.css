@@ -1,0 +1,891 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap');
+
+/* =========================
+   COLORES GENERALES
+========================= */
+
+:root {
+    --marfil: #fbf8f1;
+    --marfil-oscuro: #f4eee3;
+
+    --verde: #234d3b;
+    --verde-suave: #7d927c;
+    --verde-claro: #dfe7dc;
+
+    --dorado: #c79a45;
+    --dorado-claro: #dfc58d;
+
+    --texto: #2e382f;
+    --blanco: #ffffff;
+}
+
+
+/* =========================
+   REINICIO
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--marfil);
+    color: var(--texto);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   PORTADA
+========================= */
+
+.portada {
+    min-height: 100vh;
+    background: var(--marfil);
+}
+
+.portada-foto {
+    width: 100%;
+    height: 48vh;
+    min-height: 360px;
+    overflow: hidden;
+
+    border-bottom-left-radius: 50% 12%;
+    border-bottom-right-radius: 50% 12%;
+}
+
+.portada-foto .foto-placeholder {
+    height: 100%;
+    border: none;
+    border-radius: 0;
+}
+
+.portada-contenido {
+    position: relative;
+    padding: 45px 22px 70px;
+}
+
+.portada-contenido::before {
+    content: "♡";
+    display: block;
+
+    color: var(--dorado);
+    font-size: 34px;
+    margin-bottom: 18px;
+}
+
+.bendicion {
+    font-size: 20px;
+    line-height: 1.35;
+    margin-bottom: 25px;
+}
+
+.frase {
+    font-family: 'Great Vibes', cursive;
+    color: var(--verde);
+
+    font-size: 33px;
+    line-height: 1.2;
+
+    margin: 25px auto 30px;
+    max-width: 450px;
+}
+
+h1 {
+    color: var(--verde);
+    font-weight: 400;
+    line-height: 1;
+}
+
+h1 > span {
+    display: block;
+
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(62px, 15vw, 92px);
+
+    margin-top: 12px;
+}
+
+h1 small {
+    display: block;
+
+    font-size: 27px;
+    font-weight: 500;
+    letter-spacing: 2px;
+
+    margin-top: 4px;
+}
+
+h1 b {
+    display: block;
+
+    color: var(--dorado);
+    font-size: 40px;
+    font-weight: 400;
+
+    margin: 18px 0;
+}
+
+
+/* =========================
+   FECHA PRINCIPAL
+========================= */
+
+.fecha-principal {
+    width: min(92%, 420px);
+
+    margin: 40px auto 0;
+    padding: 22px 15px;
+
+    border-top: 1px solid var(--dorado);
+    border-bottom: 1px solid var(--dorado);
+
+    display: grid;
+    grid-template-columns: 1fr 90px 1fr;
+    align-items: center;
+}
+
+.fecha-principal p {
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.fecha-principal strong {
+    color: var(--verde);
+
+    font-size: 70px;
+    font-weight: 400;
+
+    border-left: 1px solid var(--dorado-claro);
+    border-right: 1px solid var(--dorado-claro);
+}
+
+.fecha-principal span {
+    grid-column: 1 / -1;
+
+    margin-top: 12px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    letter-spacing: 7px;
+}
+
+
+/* =========================
+   SECCIONES GENERALES
+========================= */
+
+.seccion {
+    position: relative;
+
+    padding: 80px 25px;
+
+    overflow: hidden;
+}
+
+.seccion-icono {
+    color: var(--dorado);
+
+    font-size: 27px;
+
+    margin-bottom: 12px;
+}
+
+.seccion h2 {
+    color: var(--verde);
+
+    font-size: 38px;
+    font-weight: 500;
+
+    margin-bottom: 25px;
+}
+
+.seccion h2::after {
+    content: "";
+
+    display: block;
+
+    width: 65px;
+    height: 1px;
+
+    background: var(--dorado);
+
+    margin: 14px auto 0;
+}
+
+.texto-seccion {
+    max-width: 520px;
+
+    margin: 0 auto 35px;
+
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   CONTADOR
+========================= */
+
+.contador-seccion {
+    background: var(--verde);
+    color: var(--marfil);
+
+    border-bottom-left-radius: 50% 7%;
+    border-bottom-right-radius: 50% 7%;
+}
+
+.contador-seccion::before {
+    content: "♡";
+
+    display: block;
+
+    color: var(--dorado-claro);
+
+    font-size: 31px;
+
+    margin-bottom: 25px;
+}
+
+.subtitulo {
+    font-family: 'Montserrat', sans-serif;
+
+    letter-spacing: 8px;
+    font-size: 15px;
+
+    margin-bottom: 45px;
+}
+
+.contador {
+    width: min(100%, 650px);
+
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 38px 20px;
+}
+
+.contador-item span {
+    display: block;
+
+    font-size: 70px;
+    line-height: 1;
+
+    font-weight: 400;
+}
+
+.contador-item small {
+    display: block;
+
+    margin-top: 12px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+}
+
+.contador-texto {
+    font-family: 'Great Vibes', cursive;
+
+    color: var(--dorado-claro);
+
+    font-size: 30px;
+
+    margin-top: 50px;
+}
+
+
+/* =========================
+   MÚSICA
+========================= */
+
+.musica-seccion {
+    background: var(--marfil);
+}
+
+.musica-seccion p {
+    font-size: 22px;
+    font-style: italic;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+.boton {
+    display: inline-block;
+
+    border: 1px solid var(--dorado);
+    border-radius: 40px;
+
+    background: transparent;
+    color: var(--verde);
+
+    padding: 14px 28px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease,
+        color 0.25s ease;
+}
+
+.boton:hover {
+    transform: translateY(-2px);
+
+    background-color: var(--verde);
+    color: var(--blanco);
+}
+
+
+/* =========================
+   CEREMONIA Y RECEPCIÓN
+========================= */
+
+.ubicaciones-seccion {
+    background: var(--marfil-oscuro);
+}
+
+.evento {
+    position: relative;
+
+    width: min(100%, 520px);
+
+    margin: 35px auto;
+    padding: 48px 24px;
+
+    background: var(--marfil);
+
+    border: 1px solid var(--dorado-claro);
+
+    border-radius: 180px 180px 30px 30px;
+}
+
+.evento-icono {
+    color: var(--verde);
+
+    font-size: 42px;
+
+    margin-bottom: 20px;
+}
+
+.evento-tipo {
+    color: var(--dorado);
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 12px;
+    letter-spacing: 5px;
+
+    margin-bottom: 15px;
+}
+
+.evento h3 {
+    color: var(--verde);
+
+    font-size: 27px;
+    font-weight: 500;
+
+    margin-bottom: 12px;
+}
+
+.evento-hora {
+    color: var(--dorado);
+
+    font-size: 26px;
+    font-weight: 600;
+
+    margin-bottom: 20px;
+}
+
+.evento-direccion {
+    font-size: 18px;
+    line-height: 1.45;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   GALERÍA
+========================= */
+
+.galeria-seccion {
+    background: var(--marfil);
+}
+
+.galeria {
+    width: min(100%, 900px);
+
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+}
+
+.foto-placeholder {.foto-portada {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+}
+
+.foto-galeria {
+    display: block;
+    width: 100%;
+    height: 280px;
+
+    object-fit: cover;
+    object-position: center;
+
+    border: 1px solid var(--dorado-claro);
+    border-radius: 18px;
+
+    box-shadow: 0 8px 24px rgba(35, 77, 59, 0.10);
+}
+
+.foto-galeria:nth-child(1),
+.foto-galeria:nth-child(4) {
+    height: 360px;
+}
+    min-height: 250px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--verde-claro),
+            var(--marfil-oscuro)
+        );
+
+    border: 1px solid var(--dorado-claro);
+    border-radius: 18px;
+
+    color: var(--verde-suave);
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.galeria .foto-placeholder:nth-child(1),
+.galeria .foto-placeholder:nth-child(4) {
+    min-height: 340px;
+}
+
+
+/* =========================
+   REGALO SOLIDARIO
+========================= */
+
+.regalo-seccion {
+    background: var(--verde);
+    color: var(--marfil);
+
+    border-top-left-radius: 50% 8%;
+    border-top-right-radius: 50% 8%;
+
+    padding-top: 100px;
+}
+
+.regalo-seccion h2 {
+    color: var(--marfil);
+}
+
+.regalo-seccion h2::after {
+    background: var(--dorado);
+}
+
+/* Huellita más grande */
+.regalo-seccion .seccion-icono {
+    color: var(--blanco) ;
+    font-size: 52px;
+    line-height: 1;
+    margin-bottom: 18px;
+}
+.huella-blanca svg {
+    width: 52px;
+    height: 52px;
+    fill: var(--blanco);
+    display: block;
+    margin: 0 auto;
+}
+
+.texto-regalo {
+    max-width: 600px;
+
+    margin: 0 auto 35px;
+
+    font-size: 21px;
+    line-height: 1.55;
+}
+
+.proveedor {
+    width: min(100%, 450px);
+
+    margin: 35px auto 0;
+    padding: 25px;
+
+    border: 1px solid var(--dorado);
+    border-radius: 30px;
+}
+
+.proveedor p {
+    margin-bottom: 20px;
+
+    font-style: italic;
+    font-size: 18px;
+}
+
+.boton-secundario {
+    color: var(--marfil);
+    border-color: var(--dorado);
+}
+
+.boton-secundario:hover {
+    background: var(--dorado);
+    color: var(--verde);
+}
+
+
+/* =========================
+   CONFIRMACIÓN
+========================= */
+
+.confirmacion-seccion {
+    background: var(--marfil);
+
+    padding-top: 90px;
+    padding-bottom: 100px;
+}
+
+.confirmacion-seccion > p {
+    font-size: 20px;
+
+    margin: 8px auto;
+}
+
+.fecha-confirmacion {
+    width: min(100%, 500px);
+
+    margin: 25px auto 35px !important;
+
+    line-height: 1.5;
+}
+
+.fecha-confirmacion strong {
+    display: block;
+
+    color: var(--verde);
+
+    font-size: 23px;
+
+    margin-top: 8px;
+}
+
+.boton-whatsapp {
+    background: var(--verde);
+    color: var(--blanco);
+
+    border: 1px solid var(--verde);
+
+    padding: 17px 30px;
+}
+
+
+/* =========================
+   PIE
+========================= */
+
+.pie {
+    padding: 80px 25px;
+
+    background: var(--verde);
+
+    color: var(--marfil);
+}
+
+.pie > p:first-child {
+    width: min(100%, 450px);
+
+    margin: auto;
+
+    font-size: 21px;
+    line-height: 1.5;
+}
+
+.corazon {
+    color: var(--dorado);
+
+    font-size: 35px;
+
+    margin: 30px 0;
+}
+
+.pie h2 {
+    font-family: 'Great Vibes', cursive;
+
+    font-weight: 400;
+
+    font-size: 48px;
+}
+
+.fecha-pie {
+    margin-top: 25px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    letter-spacing: 6px;
+    font-size: 12px;
+}
+
+
+/* =========================
+   COMPUTADORA / TABLET
+========================= */
+
+@media (min-width: 700px) {
+
+    .portada-foto {
+        height: 55vh;
+    }
+
+    .portada-contenido {
+        padding-top: 60px;
+    }
+
+    .contador {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .contador-item + .contador-item {
+        border-left: 1px solid rgba(255,255,255,0.25);
+    }
+
+    .ubicaciones-seccion {
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+
+    .evento {
+        display: inline-block;
+
+        width: 42%;
+
+        margin: 30px 2%;
+
+        vertical-align: top;
+
+        min-height: 520px;
+    }
+
+    .galeria {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+/* =========================
+   PANTALLAS PEQUEÑAS
+========================= */
+
+@media (max-width: 380px) {
+
+    h1 > span {
+        font-size: 55px;
+    }
+
+    h1 small {
+        font-size: 23px;
+    }
+
+    .fecha-principal strong {
+        font-size: 58px;
+    }
+
+    .contador-item span {
+        font-size: 58px;
+    }
+
+    .seccion {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+}/* =========================
+   AJUSTE FINAL DE FOTOGRAFÍAS
+========================= */
+
+/* PORTADA: mostrar la fotografía completa */
+.portada-foto {
+    width: min(100%, 780px);
+    height: auto;
+    min-height: 0;
+    margin: 0 auto;
+
+    overflow: hidden;
+
+    border-bottom-left-radius: 50% 8%;
+    border-bottom-right-radius: 50% 8%;
+}
+
+.foto-portada {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+    object-position: center;
+}
+
+
+/* GALERÍA: 6 fotografías ordenadas */
+.galeria {
+    width: min(94%, 1050px);
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 14px;
+}
+
+.foto-galeria,
+.foto-galeria:nth-child(1),
+.foto-galeria:nth-child(4) {
+    display: block;
+
+    width: 100%;
+    min-width: 0;
+    height: 220px;
+
+    object-fit: cover;
+    object-position: center;
+
+    border: 1px solid var(--dorado-claro);
+    border-radius: 18px;
+
+    box-shadow: 0 8px 24px rgba(35, 77, 59, 0.10);
+}
+
+
+/* GALERÍA EN CELULAR */
+@media (max-width: 699px) {
+
+    .portada-foto {
+        width: 100%;
+    }
+
+    .galeria {
+        width: 92%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .foto-galeria,
+    .foto-galeria:nth-child(1),
+    .foto-galeria:nth-child(4) {
+        height: 190px;
+    }
+}/* Ajuste de toda la fila inferior */
+.foto-galeria:nth-child(4),
+.foto-galeria:nth-child(5),
+.foto-galeria:nth-child(6) {
+    height: 250px;
+}/* =========================
+   REPRODUCTOR DE NUESTRA CANCIÓN
+========================= */
+
+.titulo-cancion {
+    font-family: 'Great Vibes', cursive;
+    color: var(--verde);
+    font-size: 31px;
+    margin-bottom: 4px;
+}
+
+.artista-cancion {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dorado);
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-style: normal !important;
+    margin-bottom: 28px !important;
+}
+
+.reproductor-youtube {
+    width: min(92%, 520px);
+    margin: 0 auto;
+
+    overflow: hidden;
+
+    border: 1px solid var(--dorado-claro);
+    border-radius: 24px;
+
+    box-shadow: 0 10px 30px rgba(35, 77, 59, 0.12);
+
+    background: var(--verde);
+}
+
+.reproductor-youtube iframe {
+    display: block;
+
+    width: 100%;
+    aspect-ratio: 16 / 9;
+
+    border: 0;
+}/* Botón de nuestra canción */
+.enlace-cancion {
+    margin-top: 28px;
+}
+
+.boton-cancion {
+    background: var(--verde);
+    color: var(--blanco);
+    border-color: var(--verde);
+
+    padding: 17px 30px;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.boton-cancion:hover {
+    background: var(--dorado);
+    border-color: var(--dorado);
+    color: var(--blanco);
+}
