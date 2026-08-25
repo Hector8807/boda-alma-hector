@@ -908,8 +908,15 @@ h1 b {
         font-size: 0.8em;
     }
 }/* A estilizada en Alma y Alonso */
+/* A más fina y estilizada en Alma y Alonso */
 .a-estilizada {
-    font-family: "Pinyon Script", cursive;
+    font-family: "Italianno", cursive;
     font-style: normal;
     font-weight: 400;
+    display: inline-block;
+    transform: scaleX(0.72);
+    transform-origin: center;
+    margin-left: -0.03em;
+    margin-right: -0.08em;
+}
 }
