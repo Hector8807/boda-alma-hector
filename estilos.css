@@ -907,4 +907,9 @@ h1 b {
         margin: 8px 0;
         font-size: 0.8em;
     }
+}/* A estilizada en Alma y Alonso */
+.a-estilizada {
+    font-family: "Pinyon Script", cursive;
+    font-style: normal;
+    font-weight: 400;
 }
