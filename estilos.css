@@ -888,4 +888,11 @@ h1 b {
     background: var(--dorado);
     border-color: var(--dorado);
     color: var(--blanco);
+}/* Mantener juntos los nombres del pie en celular */
+@media (max-width: 699px) {
+    .pie h2 {
+        font-size: clamp(30px, 9vw, 40px);
+        white-space: nowrap;
+        line-height: 1.1;
+    }
 }
